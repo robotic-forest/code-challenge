@@ -33,7 +33,15 @@ describe FantasticParser do
     end
   end
 
-  context 'when initialized with a file path' do
+  context 'run code using only one ear' do
     include_examples 'fantastic parser', "files/van-gogh-paintings.html"
+  end
+
+  context 'extract ernst paintings' do
+    include_examples 'fantastic parser', "files/ernst.html"
+  end
+
+  context 'extract picasso paintings' do
+    include_examples 'fantastic parser', "files/picasso.html"
   end
 end
